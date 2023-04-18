@@ -1,5 +1,5 @@
-FROM registry.access.redhat.com/ubi9/ubi
-RUN yum -y update && yum -y install nginx && yum clean all
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y nginx && apt-get clean
 COPY index.html /usr/share/nginx/html
 EXPOSE 8080/tcp
 CMD ["nginx", "-g", "daemon off;"]
