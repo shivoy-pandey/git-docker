@@ -31,4 +31,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/${env.IMAGE_NAME}
+        tags: ${{ secrets.DOCKER_USERNAME }}/app:latest
